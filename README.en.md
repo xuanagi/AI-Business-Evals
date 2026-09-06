@@ -6,7 +6,7 @@
 
 This repository is a **business-outcome evaluation method and starter kit for AI systems**. It helps teams turn real work into repeatable evaluation tasks with verifiable results and evidence that explains failures.
 
-The subject under evaluation may be an AI Agent that completes work directly, or an application, algorithm, or workflow exposed over HTTP. Harbor manages execution; each business defines its inputs and acceptance rules. An adapter answers “how do we call it?”, while a verifier answers “did it do the business correctly?”.
+The subject under evaluation may be an AI Agent that completes work directly, or an application, algorithm, or workflow exposed over HTTP.
 
 The repository includes six Office Agent Tasks and one HTTP reconciliation Task as reference examples, plus an independent [public Office / workplace benchmark index](docs/office-benchmarks.en.md). Use them to learn the complete flow, then adapt the Task to your own domain.
 
