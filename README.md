@@ -65,7 +65,7 @@ Linux / macOS：
 ./scripts/start-trajectory-portal.sh
 ```
 
-[Portal](tools/trajectory-portal) 提供运行概览、单个 Trial 审阅、多 Trial 结果比较与双 Trial 深度对比，可选择 2–4 个 Trial，并连接 Harbor Viewer、RLViz 和 AgentViz。HTTP 示例可查看响应与调用日志，不会生成模型对话轨迹。
+[Portal](tools/trajectory-portal)（本项目提供的运行结果分析与检视界面）提供运行概览、单个 Trial 审阅、多 Trial 结果比较与双 Trial 深度对比，可选择 2–4 个 Trial，并连接 Harbor Viewer、RLViz 和 AgentViz。HTTP 示例可查看响应与调用日志，不会生成模型对话轨迹。
 
 ### Portal 界面示例
 

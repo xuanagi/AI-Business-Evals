@@ -67,7 +67,7 @@ Linux / macOS:
 ./scripts/start-trajectory-portal.sh
 ```
 
-[The Portal](tools/trajectory-portal/README.en.md) provides run overview, single-Trial review, multi-Trial comparison, and deep two-Trial comparison. It can open Harbor Viewer, RLViz, and AgentViz. HTTP examples show the response and call log; they do not produce model conversation trajectories.
+[The Portal](tools/trajectory-portal/README.en.md) (this project’s run-results analysis and inspection interface) provides run overview, single-Trial review, multi-Trial comparison, and deep two-Trial comparison. It can open Harbor Viewer, RLViz, and AgentViz. HTTP examples show the response and call log; they do not produce model conversation trajectories.
 
 ### Portal at a glance
 
