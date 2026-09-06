@@ -46,8 +46,6 @@ Define business inputs and acceptance rules → Execute with Harbor → Verify b
 
 ## Quick start
 
-HTTP integration has been verified with Harbor 0.22.0 / Python 3.12. See the linked run guides for complete commands.
-
 | Path | Prerequisites | Entry point and expected result |
 | --- | --- | --- |
 | HTTP application / algorithm | Python, uv, a running Docker daemon; the local teaching service needs no model account | Follow [HTTP quick start](docs/harbor/http-evaluation.en.md) to run HTTP and oracle implementations. Both should pass the same verifier and produce response JSON, call logs, and component scores. |

@@ -44,8 +44,6 @@
 
 ## 快速开始
 
-HTTP 接入已按 Harbor 0.22.0 / Python 3.12 验证；完整环境和命令见对应运行说明。
-
 | 路径 | 准备条件 | 运行入口与预期结果 |
 | --- | --- | --- |
 | HTTP 应用 / 算法 | Python、uv、已启动的 Docker；本地教学服务无需模型账号 | 按 [HTTP 快速开始](docs/harbor/http-evaluation.md) 启动服务并运行 HTTP / oracle 两种实现；预期都通过同一个 verifier，得到响应 JSON、调用记录和分项评分 |
