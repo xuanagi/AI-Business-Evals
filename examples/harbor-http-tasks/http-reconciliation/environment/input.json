@@ -1,0 +1,17 @@
+{
+  "orders": [
+    {"order_id": "A", "quantity": 10, "amount": 1000},
+    {"order_id": "B", "quantity": 10, "amount": 2000},
+    {"order_id": "C", "quantity": 5, "amount": 500},
+    {"order_id": "D", "quantity": 2, "amount": 300},
+    {"order_id": "E", "quantity": 4, "amount": 400}
+  ],
+  "receipts": [
+    {"receipt_id": "r1", "order_id": "A", "quantity": 6, "amount": 600},
+    {"receipt_id": "r2", "order_id": "A", "quantity": 4, "amount": 400},
+    {"receipt_id": "r2", "order_id": "A", "quantity": 4, "amount": 400},
+    {"receipt_id": "r3", "order_id": "B", "quantity": 8, "amount": 1600},
+    {"receipt_id": "r4", "order_id": "C", "quantity": 6, "amount": 600},
+    {"receipt_id": "r5", "order_id": "E", "quantity": 4, "amount": 350}
+  ]
+}

@@ -1,0 +1,37 @@
+schema_version = "1.4"
+
+[task]
+name = "agentic-office-evals/office-fee-data-cleaning-l3-051"
+version = "1.1.1"
+description = "清洗并标准化产品与费率资料，生成可追溯的 Excel 工作簿。"
+authors = [{ name = "AI Business Evals contributors" }]
+keywords = ["office", "xlsx", "pdf", "data-cleaning"]
+
+[metadata]
+source_case = "office-fee-data-cleaning-L3-051"
+example_only = true
+example_series = "051-056"
+content_origin = "adapted"
+license = "LicenseRef-Tencent-WorkBuddy-Bench"
+source_project = "Tencent/workbuddy-bench"
+source_task = "fund-product-table-normalize-L3-017"
+difficulty = "easy"
+category = "data-file-ops"
+tags = ["data-file-ops", "office", "xlsx", "L3"]
+
+[verifier]
+timeout_sec = 1800.0
+network_mode = "public"
+
+[agent]
+timeout_sec = 1800.0
+network_mode = "public"
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "public"
+mcp_servers = []

@@ -1,0 +1,366 @@
+{
+  "case_id": "office-fee-data-cleaning-L3-051",
+  "case_type": "cleaning",
+  "output_contract": {
+    "path": "/workspace/output/result.xlsx",
+    "type": "xlsx"
+  },
+  "required_sheets": [
+    "产品对比",
+    "费用明细",
+    "风险等级",
+    "异常数据",
+    "处理说明"
+  ],
+  "products": [
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "name": "安桥稳收一年持有",
+      "risk": "R2"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "name": "安桥稳收一年持有",
+      "risk": "R2"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "name": "柏舟成长精选",
+      "risk": "R4"
+    },
+    {
+      "id": "FP-1303",
+      "share": "A",
+      "name": "澄岳均衡配置",
+      "risk": "R3"
+    }
+  ],
+  "fee_records": [
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "subscription_frontend",
+      "investor_group": "非特定投资群体",
+      "condition": "M < 100万元",
+      "value": 0.6,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "subscription_frontend",
+      "investor_group": "非特定投资群体",
+      "condition": "100万元 ≤ M < 500万元",
+      "value": 0.4,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "subscription_frontend",
+      "investor_group": "非特定投资群体",
+      "condition": "M ≥ 500万元",
+      "value": 1000.0,
+      "unit": "CNY_per_txn"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "subscription_frontend",
+      "investor_group": "特定投资群体",
+      "condition": "M < 100万元",
+      "value": 0.06,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "redemption",
+      "investor_group": "全部投资群体",
+      "condition": "N < 7天",
+      "value": 1.5,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "redemption",
+      "investor_group": "全部投资群体",
+      "condition": "7天 ≤ N < 365天",
+      "value": 0.2,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "redemption",
+      "investor_group": "全部投资群体",
+      "condition": "N ≥ 365天",
+      "value": 0.0,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "section": "sales_fee",
+      "type": "subscription_frontend",
+      "investor_group": "全部投资群体",
+      "condition": "全部金额",
+      "value": 0.0,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "section": "sales_fee",
+      "type": "redemption",
+      "investor_group": "全部投资群体",
+      "condition": "N < 7天",
+      "value": 1.5,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "section": "sales_fee",
+      "type": "redemption",
+      "investor_group": "全部投资群体",
+      "condition": "N ≥ 7天",
+      "value": 0.0,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "subscription_frontend",
+      "investor_group": "非特定投资群体",
+      "condition": "M < 100万元",
+      "value": 1.2,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "subscription_frontend",
+      "investor_group": "非特定投资群体",
+      "condition": "M ≥ 100万元",
+      "value": 0.8,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "redemption",
+      "investor_group": "全部投资群体",
+      "condition": "N < 30天",
+      "value": 0.5,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "section": "sales_fee",
+      "type": "redemption",
+      "investor_group": "全部投资群体",
+      "condition": "N ≥ 30天",
+      "value": 0.0,
+      "unit": "percent"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "operation_fee",
+      "type": "management",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.46,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "operation_fee",
+      "type": "custody",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.08,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "operation_fee",
+      "type": "sales_service",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.0,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "section": "operation_fee",
+      "type": "management",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.45,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "section": "operation_fee",
+      "type": "custody",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.08,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "section": "operation_fee",
+      "type": "sales_service",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.2,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "section": "operation_fee",
+      "type": "management",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 1.2,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "section": "operation_fee",
+      "type": "custody",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.1,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1303",
+      "share": "A",
+      "section": "operation_fee",
+      "type": "custody",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.1,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1303",
+      "share": "A",
+      "section": "operation_fee",
+      "type": "sales_service",
+      "investor_group": "全部投资群体",
+      "condition": "annual_rate",
+      "value": 0.0,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "section": "comprehensive_fee",
+      "type": "comprehensive_fee_rate",
+      "condition": "annualized_estimate",
+      "investor_group": "全部投资群体",
+      "value": 0.61,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "section": "comprehensive_fee",
+      "type": "comprehensive_fee_rate",
+      "condition": "annualized_estimate",
+      "investor_group": "全部投资群体",
+      "value": 0.73,
+      "unit": "percent_per_year"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "section": "comprehensive_fee",
+      "type": "comprehensive_fee_rate",
+      "condition": "annualized_estimate",
+      "investor_group": "全部投资群体",
+      "value": 1.45,
+      "unit": "percent_per_year"
+    }
+  ],
+  "risk_records": [
+    {
+      "id": "FP-1301",
+      "share": "A",
+      "source_label": "稳健型客户可关注",
+      "risk": "R2",
+      "order": 2,
+      "suitability": "稳健型及以上"
+    },
+    {
+      "id": "FP-1301",
+      "share": "C",
+      "source_label": "中低风险",
+      "risk": "R2",
+      "order": 2,
+      "suitability": "稳健型及以上"
+    },
+    {
+      "id": "FP-1302",
+      "share": "A",
+      "source_label": "进取型",
+      "risk": "R4",
+      "order": 4,
+      "suitability": "积极型及以上"
+    },
+    {
+      "id": "FP-1303",
+      "share": "A",
+      "source_label": "平衡型",
+      "risk": "R3",
+      "order": 3,
+      "suitability": "平衡型及以上"
+    }
+  ],
+  "minimum_exception_rows": 6,
+  "exception_token_groups": [
+    [
+      "管理费",
+      "冲突"
+    ],
+    [
+      "综合费率",
+      "缺失"
+    ],
+    [
+      "高波动成长型",
+      "无法"
+    ],
+    [
+      "渠道优惠"
+    ]
+  ],
+  "effective_date": "2026-06-01"
+}

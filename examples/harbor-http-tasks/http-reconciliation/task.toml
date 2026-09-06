@@ -1,0 +1,28 @@
+schema_version = "1.4"
+
+[task]
+name = "agentic-office-evals/http-reconciliation"
+version = "1.0.0"
+description = "Reconcile orders and receipts through a JSON HTTP service."
+authors = [{ name = "AI Business Evals contributors" }]
+keywords = ["http", "reconciliation", "example"]
+
+[metadata]
+example_only = true
+content_origin = "original"
+license = "Apache-2.0"
+
+[agent]
+timeout_sec = 60.0
+network_mode = "public"
+
+[verifier]
+timeout_sec = 30.0
+network_mode = "public"
+
+[environment]
+build_timeout_sec = 300.0
+cpus = 1
+memory_mb = 512
+storage_mb = 1024
+network_mode = "public"

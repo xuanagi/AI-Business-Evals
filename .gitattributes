@@ -1,0 +1,2 @@
+*.bat text eol=crlf
+examples/harbor-http-tasks/**/*.sh text eol=lf

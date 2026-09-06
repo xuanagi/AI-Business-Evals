@@ -1,0 +1,1649 @@
+{
+  "case_id": "office-channel-anomaly-analysis-L4-054",
+  "case_type": "anomaly_analysis",
+  "output_contract": {
+    "path": "/workspace/output/result.xlsx",
+    "type": "xlsx"
+  },
+  "required_sheets": [
+    "结算对比",
+    "回款对比",
+    "重点异常",
+    "数据质量",
+    "处理说明"
+  ],
+  "channels": [
+    "万家好物联盟",
+    "乐购优品",
+    "云端优品专营",
+    "优享全球购",
+    "凯瑞电商",
+    "品胜严选",
+    "天际数码港",
+    "尚品优选",
+    "惠通达渠道",
+    "星辰数码旗舰店",
+    "智汇通数码",
+    "汇鑫商贸",
+    "环球数码城",
+    "盛世优选",
+    "翠微精选商城",
+    "芯联科技店",
+    "蓝海科技直营",
+    "金桥百货在线",
+    "锦绣生活馆",
+    "鼎盛电子渠道"
+  ],
+  "source_counts": {
+    "payment": {
+      "raw": 1010,
+      "deduplicated": 1005,
+      "excluded_quarter": 5
+    },
+    "settlement": {
+      "raw": 1210,
+      "deduplicated": 1205,
+      "excluded_quarter": 5
+    }
+  },
+  "comparisons": {
+    "结算对比": [
+      {
+        "channel": "万家好物联盟",
+        "metric": "GMV",
+        "previous": 2124097.8,
+        "current": 1861736.78,
+        "difference": -262361.0199999998,
+        "growth": -0.1235164501370887
+      },
+      {
+        "channel": "万家好物联盟",
+        "metric": "REVENUE",
+        "previous": 284644.9,
+        "current": 252556.8,
+        "difference": -32088.100000000035,
+        "growth": -0.11273028253799745
+      },
+      {
+        "channel": "万家好物联盟",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.04017376224390422,
+        "current": 0.04357996837769945,
+        "difference": 0.0034062061337952337,
+        "growth": 0.08478683457913071
+      },
+      {
+        "channel": "万家好物联盟",
+        "metric": "ORDER_COUNT",
+        "previous": 6801.0,
+        "current": 5966.0,
+        "difference": -835.0,
+        "growth": -0.12277606234377297
+      },
+      {
+        "channel": "乐购优品",
+        "metric": "GMV",
+        "previous": 680265.6,
+        "current": 817155.59,
+        "difference": 136889.99,
+        "growth": 0.2012302106706557
+      },
+      {
+        "channel": "乐购优品",
+        "metric": "REVENUE",
+        "previous": 85092.05,
+        "current": 105694.23,
+        "difference": 20602.179999999993,
+        "growth": 0.24211639042660263
+      },
+      {
+        "channel": "乐购优品",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.037733967438600455,
+        "current": 0.04231632313743336,
+        "difference": 0.0045823556988329045,
+        "growth": 0.12143848129113834
+      },
+      {
+        "channel": "乐购优品",
+        "metric": "ORDER_COUNT",
+        "previous": 2037.0,
+        "current": 2568.0,
+        "difference": 531.0,
+        "growth": 0.2606774668630339
+      },
+      {
+        "channel": "云端优品专营",
+        "metric": "GMV",
+        "previous": 767339.76,
+        "current": 852604.13,
+        "difference": 85264.37,
+        "growth": 0.11111684086329632
+      },
+      {
+        "channel": "云端优品专营",
+        "metric": "REVENUE",
+        "previous": 108173.31,
+        "current": 119698.38,
+        "difference": 11525.070000000007,
+        "growth": 0.10654263976945891
+      },
+      {
+        "channel": "云端优品专营",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.03986103887018705,
+        "current": 0.04053052147425089,
+        "difference": 0.0006694826040638396,
+        "growth": 0.0167954128401947
+      },
+      {
+        "channel": "云端优品专营",
+        "metric": "ORDER_COUNT",
+        "previous": 2614.0,
+        "current": 2461.0,
+        "difference": -153.0,
+        "growth": -0.058530986993114
+      },
+      {
+        "channel": "优享全球购",
+        "metric": "GMV",
+        "previous": 2111386.8,
+        "current": 2223299.92,
+        "difference": 111913.12000000011,
+        "growth": 0.05300455605765846
+      },
+      {
+        "channel": "优享全球购",
+        "metric": "REVENUE",
+        "previous": 280571.63,
+        "current": 277117.37,
+        "difference": -3454.2600000000093,
+        "growth": -0.012311508472898736
+      },
+      {
+        "channel": "优享全球购",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.038945867237590005,
+        "current": 0.04070514696910527,
+        "difference": 0.0017592797315152675,
+        "growth": 0.04517243693105479
+      },
+      {
+        "channel": "优享全球购",
+        "metric": "ORDER_COUNT",
+        "previous": 6914.0,
+        "current": 6248.0,
+        "difference": -666.0,
+        "growth": -0.0963262944749783
+      },
+      {
+        "channel": "凯瑞电商",
+        "metric": "GMV",
+        "previous": 570636.8,
+        "current": 650369.87,
+        "difference": 79733.06999999995,
+        "growth": 0.1397264775072339
+      },
+      {
+        "channel": "凯瑞电商",
+        "metric": "REVENUE",
+        "previous": 70775.59,
+        "current": 85021.9,
+        "difference": 14246.309999999998,
+        "growth": 0.20128846682874701
+      },
+      {
+        "channel": "凯瑞电商",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.042572578564859465,
+        "current": 0.04180847123191608,
+        "difference": -0.0007641073329433812,
+        "growth": -0.0179483451250025
+      },
+      {
+        "channel": "凯瑞电商",
+        "metric": "ORDER_COUNT",
+        "previous": 1702.0,
+        "current": 2003.0,
+        "difference": 301.0,
+        "growth": 0.17685076380728554
+      },
+      {
+        "channel": "品胜严选",
+        "metric": "GMV",
+        "previous": 907002.88,
+        "current": 1088442.8699999999,
+        "difference": 181439.98999999987,
+        "growth": 0.20004345520931519
+      },
+      {
+        "channel": "品胜严选",
+        "metric": "REVENUE",
+        "previous": 125883.03,
+        "current": 150038.96,
+        "difference": 24155.929999999993,
+        "growth": 0.19189186977784053
+      },
+      {
+        "channel": "品胜严选",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.03922392175866079,
+        "current": 0.04016643519379203,
+        "difference": 0.0009425134351312425,
+        "growth": 0.024029046379665797
+      },
+      {
+        "channel": "品胜严选",
+        "metric": "ORDER_COUNT",
+        "previous": 2663.0,
+        "current": 3515.0,
+        "difference": 852.0,
+        "growth": 0.3199399173864063
+      },
+      {
+        "channel": "天际数码港",
+        "metric": "GMV",
+        "previous": 1139160.66,
+        "current": 1330980.64,
+        "difference": 191819.97999999998,
+        "growth": 0.16838711758181676
+      },
+      {
+        "channel": "天际数码港",
+        "metric": "REVENUE",
+        "previous": 131384.56,
+        "current": 170994.26,
+        "difference": 39609.70000000001,
+        "growth": 0.30147910835184905
+      },
+      {
+        "channel": "天际数码港",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.040725774360922895,
+        "current": 0.03878123276083115,
+        "difference": -0.0019445416000917481,
+        "growth": -0.047747197704792334
+      },
+      {
+        "channel": "天际数码港",
+        "metric": "ORDER_COUNT",
+        "previous": 3722.0,
+        "current": 4986.0,
+        "difference": 1264.0,
+        "growth": 0.3396023643202579
+      },
+      {
+        "channel": "尚品优选",
+        "metric": "GMV",
+        "previous": 1582667.52,
+        "current": 1722491.89,
+        "difference": 139824.36999999988,
+        "growth": 0.08834727966111283
+      },
+      {
+        "channel": "尚品优选",
+        "metric": "REVENUE",
+        "previous": 195111.86,
+        "current": 214692.91999999998,
+        "difference": 19581.059999999998,
+        "growth": 0.10035812277121442
+      },
+      {
+        "channel": "尚品优选",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.03804550181202935,
+        "current": 0.04067732940095294,
+        "difference": 0.0026318275889235937,
+        "growth": 0.06917578855778041
+      },
+      {
+        "channel": "尚品优选",
+        "metric": "ORDER_COUNT",
+        "previous": 5293.0,
+        "current": 5139.0,
+        "difference": -154.0,
+        "growth": -0.029095031173247684
+      },
+      {
+        "channel": "惠通达渠道",
+        "metric": "GMV",
+        "previous": 523962.3,
+        "current": 622201.1,
+        "difference": 98238.79999999999,
+        "growth": 0.1874921153678423
+      },
+      {
+        "channel": "惠通达渠道",
+        "metric": "REVENUE",
+        "previous": 64190.96,
+        "current": 79730.1,
+        "difference": 15539.140000000007,
+        "growth": 0.24207676594959798
+      },
+      {
+        "channel": "惠通达渠道",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.04144414588606852,
+        "current": 0.0398231536395548,
+        "difference": -0.0016209922465137208,
+        "growth": -0.03911269521562558
+      },
+      {
+        "channel": "惠通达渠道",
+        "metric": "ORDER_COUNT",
+        "previous": 1510.0,
+        "current": 1927.0,
+        "difference": 417.0,
+        "growth": 0.276158940397351
+      },
+      {
+        "channel": "星辰数码旗舰店",
+        "metric": "GMV",
+        "previous": 1158997.0,
+        "current": 1347324.37,
+        "difference": 188327.3700000001,
+        "growth": 0.16249168030633393
+      },
+      {
+        "channel": "星辰数码旗舰店",
+        "metric": "REVENUE",
+        "previous": 151235.63,
+        "current": 179962.76,
+        "difference": 28727.130000000005,
+        "growth": 0.18994948478741422
+      },
+      {
+        "channel": "星辰数码旗舰店",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.03716860354254584,
+        "current": 0.03805189094887373,
+        "difference": 0.0008832874063278845,
+        "growth": 0.02376434200216348
+      },
+      {
+        "channel": "星辰数码旗舰店",
+        "metric": "ORDER_COUNT",
+        "previous": 3648.0,
+        "current": 3963.0,
+        "difference": 315.0,
+        "growth": 0.08634868421052631
+      },
+      {
+        "channel": "智汇通数码",
+        "metric": "GMV",
+        "previous": 1320445.28,
+        "current": 1486600.38,
+        "difference": 166155.09999999986,
+        "growth": 0.1258326282176569
+      },
+      {
+        "channel": "智汇通数码",
+        "metric": "REVENUE",
+        "previous": 178342.54,
+        "current": 176081.91,
+        "difference": -2260.6300000000047,
+        "growth": -0.012675775504823496
+      },
+      {
+        "channel": "智汇通数码",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.03835934041886234,
+        "current": 0.039402828620291354,
+        "difference": 0.0010434882014290145,
+        "growth": 0.027202975599546615
+      },
+      {
+        "channel": "智汇通数码",
+        "metric": "ORDER_COUNT",
+        "previous": 4284.0,
+        "current": 4900.0,
+        "difference": 616.0,
+        "growth": 0.1437908496732026
+      },
+      {
+        "channel": "汇鑫商贸",
+        "metric": "GMV",
+        "previous": 1491325.92,
+        "current": 1535457.1,
+        "difference": 44131.18000000017,
+        "growth": 0.029591908387135234
+      },
+      {
+        "channel": "汇鑫商贸",
+        "metric": "REVENUE",
+        "previous": 176529.15,
+        "current": 206439.76,
+        "difference": 29910.610000000015,
+        "growth": 0.1694372289222489
+      },
+      {
+        "channel": "汇鑫商贸",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.04066251996746627,
+        "current": 0.04042330456513568,
+        "difference": -0.00023921540233058647,
+        "growth": -0.005882945831246579
+      },
+      {
+        "channel": "汇鑫商贸",
+        "metric": "ORDER_COUNT",
+        "previous": 4575.0,
+        "current": 4807.0,
+        "difference": 232.0,
+        "growth": 0.0507103825136612
+      },
+      {
+        "channel": "环球数码城",
+        "metric": "GMV",
+        "previous": 967736.64,
+        "current": 1031593.49,
+        "difference": 63856.84999999998,
+        "growth": 0.06598577274081507
+      },
+      {
+        "channel": "环球数码城",
+        "metric": "REVENUE",
+        "previous": 124197.55,
+        "current": 134733.91,
+        "difference": 10536.36,
+        "growth": 0.08483548991103287
+      },
+      {
+        "channel": "环球数码城",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.037615616165984994,
+        "current": 0.04256866723732427,
+        "difference": 0.004953051071339275,
+        "growth": 0.13167539379078985
+      },
+      {
+        "channel": "环球数码城",
+        "metric": "ORDER_COUNT",
+        "previous": 2890.0,
+        "current": 3055.0,
+        "difference": 165.0,
+        "growth": 0.05709342560553633
+      },
+      {
+        "channel": "盛世优选",
+        "metric": "GMV",
+        "previous": 867758.5,
+        "current": 828211.44,
+        "difference": -39547.060000000056,
+        "growth": -0.04557380884197626
+      },
+      {
+        "channel": "盛世优选",
+        "metric": "REVENUE",
+        "previous": 110616.83,
+        "current": 98924.75,
+        "difference": -11692.080000000002,
+        "growth": -0.1056989248381101
+      },
+      {
+        "channel": "盛世优选",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.042299821897451885,
+        "current": 0.041610956255325335,
+        "difference": -0.0006888656421265502,
+        "growth": -0.016285308335259138
+      },
+      {
+        "channel": "盛世优选",
+        "metric": "ORDER_COUNT",
+        "previous": 2579.0,
+        "current": 2725.0,
+        "difference": 146.0,
+        "growth": 0.05661108956960062
+      },
+      {
+        "channel": "翠微精选商城",
+        "metric": "GMV",
+        "previous": 461102.64,
+        "current": 489877.5,
+        "difference": 28774.859999999986,
+        "growth": 0.0624044572809212
+      },
+      {
+        "channel": "翠微精选商城",
+        "metric": "REVENUE",
+        "previous": 64428.86,
+        "current": 66735.37,
+        "difference": 2306.5099999999948,
+        "growth": 0.03579932967927719
+      },
+      {
+        "channel": "翠微精选商城",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.04268394559614753,
+        "current": 0.03771089711203311,
+        "difference": -0.004973048484114416,
+        "growth": -0.11650864077015556
+      },
+      {
+        "channel": "翠微精选商城",
+        "metric": "ORDER_COUNT",
+        "previous": 1367.0,
+        "current": 1343.0,
+        "difference": -24.0,
+        "growth": -0.01755669348939283
+      },
+      {
+        "channel": "芯联科技店",
+        "metric": "GMV",
+        "previous": 1675249.0,
+        "current": 1943953.76,
+        "difference": 268704.76,
+        "growth": 0.16039690816111515
+      },
+      {
+        "channel": "芯联科技店",
+        "metric": "REVENUE",
+        "previous": 222262.58,
+        "current": 252346.23,
+        "difference": 30083.650000000023,
+        "growth": 0.13535184375165638
+      },
+      {
+        "channel": "芯联科技店",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.04320161361087218,
+        "current": 0.03800397495051529,
+        "difference": -0.005197638660356892,
+        "growth": -0.12031121585349411
+      },
+      {
+        "channel": "芯联科技店",
+        "metric": "ORDER_COUNT",
+        "previous": 4606.0,
+        "current": 6083.0,
+        "difference": 1477.0,
+        "growth": 0.32066869300911854
+      },
+      {
+        "channel": "蓝海科技直营",
+        "metric": "GMV",
+        "previous": 681549.84,
+        "current": 697962.56,
+        "difference": 16412.72000000009,
+        "growth": 0.024081467028148798
+      },
+      {
+        "channel": "蓝海科技直营",
+        "metric": "REVENUE",
+        "previous": 91493.14,
+        "current": 88861.57,
+        "difference": -2631.5699999999924,
+        "growth": -0.028762484269312348
+      },
+      {
+        "channel": "蓝海科技直营",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.041461971438508445,
+        "current": 0.040219564212727967,
+        "difference": -0.0012424072257804786,
+        "growth": -0.029964981950341456
+      },
+      {
+        "channel": "蓝海科技直营",
+        "metric": "ORDER_COUNT",
+        "previous": 2195.0,
+        "current": 2004.0,
+        "difference": -191.0,
+        "growth": -0.08701594533029612
+      },
+      {
+        "channel": "金桥百货在线",
+        "metric": "GMV",
+        "previous": 1472404.0,
+        "current": 1317543.83,
+        "difference": -154860.16999999993,
+        "growth": -0.10517505385750102
+      },
+      {
+        "channel": "金桥百货在线",
+        "metric": "REVENUE",
+        "previous": 179499.41999999998,
+        "current": 171626.56,
+        "difference": -7872.859999999986,
+        "growth": -0.0438600860103057
+      },
+      {
+        "channel": "金桥百货在线",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.038421248516032284,
+        "current": 0.039928614746729145,
+        "difference": 0.0015073662306968605,
+        "growth": 0.03923261968095264
+      },
+      {
+        "channel": "金桥百货在线",
+        "metric": "ORDER_COUNT",
+        "previous": 3986.0,
+        "current": 4443.0,
+        "difference": 457.0,
+        "growth": 0.1146512794781736
+      },
+      {
+        "channel": "锦绣生活馆",
+        "metric": "GMV",
+        "previous": 1569231.0,
+        "current": 1787311.03,
+        "difference": 218080.03000000003,
+        "growth": 0.13897254770011555
+      },
+      {
+        "channel": "锦绣生活馆",
+        "metric": "REVENUE",
+        "previous": 199972.56,
+        "current": 223483.43,
+        "difference": 23510.869999999995,
+        "growth": 0.1175704806699479
+      },
+      {
+        "channel": "锦绣生活馆",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.03992681765782093,
+        "current": 0.03849641100239839,
+        "difference": -0.0014304066554225447,
+        "growth": -0.0358257116227332
+      },
+      {
+        "channel": "锦绣生活馆",
+        "metric": "ORDER_COUNT",
+        "previous": 4495.0,
+        "current": 6086.0,
+        "difference": 1591.0,
+        "growth": 0.35394883203559513
+      },
+      {
+        "channel": "鼎盛电子渠道",
+        "metric": "GMV",
+        "previous": 1113070.2,
+        "current": 1206103.61,
+        "difference": 93033.41000000015,
+        "growth": 0.08358269765914149
+      },
+      {
+        "channel": "鼎盛电子渠道",
+        "metric": "REVENUE",
+        "previous": 149140.72,
+        "current": 158954.05,
+        "difference": 9813.329999999987,
+        "growth": 0.06579913252396788
+      },
+      {
+        "channel": "鼎盛电子渠道",
+        "metric": "COMMISSION_RATE",
+        "previous": 0.03920282835709733,
+        "current": 0.03972118116784345,
+        "difference": 0.0005183528107461158,
+        "growth": 0.013222331971164333
+      },
+      {
+        "channel": "鼎盛电子渠道",
+        "metric": "ORDER_COUNT",
+        "previous": 3848.0,
+        "current": 3769.0,
+        "difference": -79.0,
+        "growth": -0.02053014553014553
+      }
+    ],
+    "回款对比": [
+      {
+        "channel": "万家好物联盟",
+        "metric": "GMV",
+        "previous": 1332494.88,
+        "current": 1634261.11,
+        "difference": 301766.2300000002,
+        "growth": 0.2264670840611412
+      },
+      {
+        "channel": "万家好物联盟",
+        "metric": "REVENUE",
+        "previous": 178751.32,
+        "current": 201997.85,
+        "difference": 23246.53,
+        "growth": 0.13004955711655722
+      },
+      {
+        "channel": "万家好物联盟",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 132734.94,
+        "current": 142554.6,
+        "difference": 9819.660000000003,
+        "growth": 0.07397946614508587
+      },
+      {
+        "channel": "万家好物联盟",
+        "metric": "HEADCOUNT",
+        "previous": 3.88,
+        "current": 4.04,
+        "difference": 0.16000000000000014,
+        "growth": 0.041237113402061897
+      },
+      {
+        "channel": "乐购优品",
+        "metric": "GMV",
+        "previous": 463525.6,
+        "current": 510323.35,
+        "difference": 46797.75,
+        "growth": 0.10096044317724846
+      },
+      {
+        "channel": "乐购优品",
+        "metric": "REVENUE",
+        "previous": 55785.09,
+        "current": 66730.42,
+        "difference": 10945.330000000002,
+        "growth": 0.19620529428203848
+      },
+      {
+        "channel": "乐购优品",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 38075.98,
+        "current": 49254.04,
+        "difference": 11178.059999999998,
+        "growth": 0.29357248322958457
+      },
+      {
+        "channel": "乐购优品",
+        "metric": "HEADCOUNT",
+        "previous": 4.12,
+        "current": 4.08,
+        "difference": -0.040000000000000036,
+        "growth": -0.009708737864077678
+      },
+      {
+        "channel": "云端优品专营",
+        "metric": "GMV",
+        "previous": 550054.08,
+        "current": 678042.59,
+        "difference": 127988.51000000001,
+        "growth": 0.23268350268395432
+      },
+      {
+        "channel": "云端优品专营",
+        "metric": "REVENUE",
+        "previous": 77240.91,
+        "current": 90426.17,
+        "difference": 13185.259999999995,
+        "growth": 0.1707030639592412
+      },
+      {
+        "channel": "云端优品专营",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 57367.340000000004,
+        "current": 62751.28999999999,
+        "difference": 5383.94999999999,
+        "growth": 0.09385043824587282
+      },
+      {
+        "channel": "云端优品专营",
+        "metric": "HEADCOUNT",
+        "previous": 3.92,
+        "current": 4.12,
+        "difference": 0.20000000000000018,
+        "growth": 0.051020408163265356
+      },
+      {
+        "channel": "优享全球购",
+        "metric": "GMV",
+        "previous": 1580919.6,
+        "current": 1845184.19,
+        "difference": 264264.58999999985,
+        "growth": 0.16715877897901946
+      },
+      {
+        "channel": "优享全球购",
+        "metric": "REVENUE",
+        "previous": 210077.47,
+        "current": 243745.97,
+        "difference": 33668.5,
+        "growth": 0.16026706719192688
+      },
+      {
+        "channel": "优享全球购",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 153320.75,
+        "current": 167371.9,
+        "difference": 14051.149999999994,
+        "growth": 0.09164545568685252
+      },
+      {
+        "channel": "优享全球购",
+        "metric": "HEADCOUNT",
+        "previous": 3.76,
+        "current": 3.44,
+        "difference": -0.31999999999999984,
+        "growth": -0.08510638297872336
+      },
+      {
+        "channel": "凯瑞电商",
+        "metric": "GMV",
+        "previous": 399527.94,
+        "current": 473261.99,
+        "difference": 73734.04999999999,
+        "growth": 0.18455292513459756
+      },
+      {
+        "channel": "凯瑞电商",
+        "metric": "REVENUE",
+        "previous": 53738.23,
+        "current": 58890.450000000004,
+        "difference": 5152.220000000001,
+        "growth": 0.09587625048312906
+      },
+      {
+        "channel": "凯瑞电商",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 39105.57,
+        "current": 40712.46000000001,
+        "difference": 1606.8900000000067,
+        "growth": 0.04109107730689021
+      },
+      {
+        "channel": "凯瑞电商",
+        "metric": "HEADCOUNT",
+        "previous": 4.08,
+        "current": 3.84,
+        "difference": -0.2400000000000002,
+        "growth": -0.058823529411764754
+      },
+      {
+        "channel": "品胜严选",
+        "metric": "GMV",
+        "previous": 597853.96,
+        "current": 718551.76,
+        "difference": 120697.80000000005,
+        "growth": 0.2018850891277864
+      },
+      {
+        "channel": "品胜严选",
+        "metric": "REVENUE",
+        "previous": 81256.03,
+        "current": 98816.37,
+        "difference": 17560.339999999997,
+        "growth": 0.2161112227609446
+      },
+      {
+        "channel": "品胜严选",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 60151.58,
+        "current": 72134.62,
+        "difference": 11983.039999999994,
+        "growth": 0.19921405223270933
+      },
+      {
+        "channel": "品胜严选",
+        "metric": "HEADCOUNT",
+        "previous": 3.84,
+        "current": 4.44,
+        "difference": 0.6000000000000005,
+        "growth": 0.15625000000000014
+      },
+      {
+        "channel": "天际数码港",
+        "metric": "GMV",
+        "previous": 825243.3,
+        "current": 966769.03,
+        "difference": 141525.72999999998,
+        "growth": 0.17149576373416175
+      },
+      {
+        "channel": "天际数码港",
+        "metric": "REVENUE",
+        "previous": 104024.1,
+        "current": 138232.7,
+        "difference": 34208.600000000006,
+        "growth": 0.3288526408784119
+      },
+      {
+        "channel": "天际数码港",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 73273.08,
+        "current": 103743.88000000002,
+        "difference": 30470.800000000017,
+        "growth": 0.4158525886996973
+      },
+      {
+        "channel": "天际数码港",
+        "metric": "HEADCOUNT",
+        "previous": 4.0,
+        "current": 3.96,
+        "difference": -0.040000000000000036,
+        "growth": -0.010000000000000009
+      },
+      {
+        "channel": "尚品优选",
+        "metric": "GMV",
+        "previous": 1140482.22,
+        "current": 1230846.34,
+        "difference": 90364.12000000011,
+        "growth": 0.07923325626242565
+      },
+      {
+        "channel": "尚品优选",
+        "metric": "REVENUE",
+        "previous": 153760.88,
+        "current": 174369.28,
+        "difference": 20608.399999999994,
+        "growth": 0.13402888953289024
+      },
+      {
+        "channel": "尚品优选",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 106503.99,
+        "current": 126548.77,
+        "difference": 20044.78,
+        "growth": 0.1882068455839072
+      },
+      {
+        "channel": "尚品优选",
+        "metric": "HEADCOUNT",
+        "previous": 4.44,
+        "current": 2.8,
+        "difference": -1.6400000000000006,
+        "growth": -0.3693693693693695
+      },
+      {
+        "channel": "惠通达渠道",
+        "metric": "GMV",
+        "previous": 346068.6,
+        "current": 426284.81,
+        "difference": 80216.21000000002,
+        "growth": 0.23179280061814342
+      },
+      {
+        "channel": "惠通达渠道",
+        "metric": "REVENUE",
+        "previous": 45436.4,
+        "current": 56505.82,
+        "difference": 11069.419999999998,
+        "growth": 0.24362449489836338
+      },
+      {
+        "channel": "惠通达渠道",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 33236.2,
+        "current": 41119.880000000005,
+        "difference": 7883.680000000008,
+        "growth": 0.2372016054783642
+      },
+      {
+        "channel": "惠通达渠道",
+        "metric": "HEADCOUNT",
+        "previous": 3.8,
+        "current": 4.0,
+        "difference": 0.20000000000000018,
+        "growth": 0.052631578947368474
+      },
+      {
+        "channel": "星辰数码旗舰店",
+        "metric": "GMV",
+        "previous": 818169.52,
+        "current": 959942.1799999999,
+        "difference": 141772.65999999992,
+        "growth": 0.17328030015100038
+      },
+      {
+        "channel": "星辰数码旗舰店",
+        "metric": "REVENUE",
+        "previous": 116145.77,
+        "current": 126365.59,
+        "difference": 10219.819999999992,
+        "growth": 0.0879913233172417
+      },
+      {
+        "channel": "星辰数码旗舰店",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 85562.43000000001,
+        "current": 90111.25999999998,
+        "difference": 4548.829999999973,
+        "growth": 0.05316387110557721
+      },
+      {
+        "channel": "星辰数码旗舰店",
+        "metric": "HEADCOUNT",
+        "previous": 4.24,
+        "current": 3.68,
+        "difference": -0.56,
+        "growth": -0.1320754716981132
+      },
+      {
+        "channel": "智汇通数码",
+        "metric": "GMV",
+        "previous": 991951.36,
+        "current": 1034882.3,
+        "difference": 42930.94000000006,
+        "growth": 0.043279279338857966
+      },
+      {
+        "channel": "智汇通数码",
+        "metric": "REVENUE",
+        "previous": 125020.75,
+        "current": 127806.39,
+        "difference": 2785.6399999999994,
+        "growth": 0.02228142128406684
+      },
+      {
+        "channel": "智汇通数码",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 83951.06,
+        "current": 87977.53,
+        "difference": 4026.470000000001,
+        "growth": 0.047962110305694784
+      },
+      {
+        "channel": "智汇通数码",
+        "metric": "HEADCOUNT",
+        "previous": 4.0,
+        "current": 4.12,
+        "difference": 0.1200000000000001,
+        "growth": 0.030000000000000027
+      },
+      {
+        "channel": "汇鑫商贸",
+        "metric": "GMV",
+        "previous": 1119357.0,
+        "current": 1270653.69,
+        "difference": 151296.68999999994,
+        "growth": 0.13516392893420057
+      },
+      {
+        "channel": "汇鑫商贸",
+        "metric": "REVENUE",
+        "previous": 137292.69,
+        "current": 159838.99,
+        "difference": 22546.29999999999,
+        "growth": 0.16422068793320305
+      },
+      {
+        "channel": "汇鑫商贸",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 95295.77,
+        "current": 110632.62,
+        "difference": 15336.849999999991,
+        "growth": 0.1609394624756166
+      },
+      {
+        "channel": "汇鑫商贸",
+        "metric": "HEADCOUNT",
+        "previous": 4.08,
+        "current": 3.4,
+        "difference": -0.6800000000000002,
+        "growth": -0.1666666666666667
+      },
+      {
+        "channel": "环球数码城",
+        "metric": "GMV",
+        "previous": 622576.08,
+        "current": 710914.19,
+        "difference": 88338.10999999999,
+        "growth": 0.14189126893535645
+      },
+      {
+        "channel": "环球数码城",
+        "metric": "REVENUE",
+        "previous": 77040.0,
+        "current": 94600.54,
+        "difference": 17560.539999999994,
+        "growth": 0.22794055036344749
+      },
+      {
+        "channel": "环球数码城",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 53045.78,
+        "current": 67505.32999999999,
+        "difference": 14459.549999999988,
+        "growth": 0.2725862453148957
+      },
+      {
+        "channel": "环球数码城",
+        "metric": "HEADCOUNT",
+        "previous": 4.08,
+        "current": 4.32,
+        "difference": 0.2400000000000002,
+        "growth": 0.058823529411764754
+      },
+      {
+        "channel": "盛世优选",
+        "metric": "GMV",
+        "previous": 538090.4,
+        "current": 694972.09,
+        "difference": 156881.68999999994,
+        "growth": 0.2915526647567025
+      },
+      {
+        "channel": "盛世优选",
+        "metric": "REVENUE",
+        "previous": 68218.24,
+        "current": 91307.58,
+        "difference": 23089.339999999997,
+        "growth": 0.3384628509911718
+      },
+      {
+        "channel": "盛世优选",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 44844.51,
+        "current": 64924.44000000001,
+        "difference": 20079.930000000008,
+        "growth": 0.44776785385769646
+      },
+      {
+        "channel": "盛世优选",
+        "metric": "HEADCOUNT",
+        "previous": 4.32,
+        "current": 4.16,
+        "difference": -0.16000000000000014,
+        "growth": -0.03703703703703707
+      },
+      {
+        "channel": "翠微精选商城",
+        "metric": "GMV",
+        "previous": 281128.7,
+        "current": 328274.25,
+        "difference": 47145.54999999999,
+        "growth": 0.16770094977851777
+      },
+      {
+        "channel": "翠微精选商城",
+        "metric": "REVENUE",
+        "previous": 38056.74,
+        "current": 45143.6,
+        "difference": 7086.860000000001,
+        "growth": 0.18621826252064683
+      },
+      {
+        "channel": "翠微精选商城",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 27984.85,
+        "current": 32108.36,
+        "difference": 4123.510000000002,
+        "growth": 0.1473479400461322
+      },
+      {
+        "channel": "翠微精选商城",
+        "metric": "HEADCOUNT",
+        "previous": 4.36,
+        "current": 4.16,
+        "difference": -0.20000000000000018,
+        "growth": -0.04587155963302756
+      },
+      {
+        "channel": "芯联科技店",
+        "metric": "GMV",
+        "previous": 1187975.04,
+        "current": 1430719.4,
+        "difference": 242744.35999999987,
+        "growth": 0.20433456245006618
+      },
+      {
+        "channel": "芯联科技店",
+        "metric": "REVENUE",
+        "previous": 158176.12,
+        "current": 180493.96,
+        "difference": 22317.839999999997,
+        "growth": 0.14109487576253607
+      },
+      {
+        "channel": "芯联科技店",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 112443.89,
+        "current": 129525.91999999998,
+        "difference": 17082.029999999984,
+        "growth": 0.15191603563341666
+      },
+      {
+        "channel": "芯联科技店",
+        "metric": "HEADCOUNT",
+        "previous": 4.16,
+        "current": 3.28,
+        "difference": -0.8800000000000003,
+        "growth": -0.21153846153846162
+      },
+      {
+        "channel": "蓝海科技直营",
+        "metric": "GMV",
+        "previous": 437601.15,
+        "current": 543675.32,
+        "difference": 106074.16999999993,
+        "growth": 0.24239920301854764
+      },
+      {
+        "channel": "蓝海科技直营",
+        "metric": "REVENUE",
+        "previous": 56872.45,
+        "current": 74624.45,
+        "difference": 17752.0,
+        "growth": 0.3121370716401351
+      },
+      {
+        "channel": "蓝海科技直营",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 42197.57,
+        "current": 52912.6,
+        "difference": 10715.029999999999,
+        "growth": 0.2539252852711661
+      },
+      {
+        "channel": "蓝海科技直营",
+        "metric": "HEADCOUNT",
+        "previous": 4.36,
+        "current": 4.24,
+        "difference": -0.1200000000000001,
+        "growth": -0.027522935779816536
+      },
+      {
+        "channel": "金桥百货在线",
+        "metric": "GMV",
+        "previous": 954038.75,
+        "current": 1061096.13,
+        "difference": 107057.37999999989,
+        "growth": 0.11221491789510635
+      },
+      {
+        "channel": "金桥百货在线",
+        "metric": "REVENUE",
+        "previous": 125908.98,
+        "current": 143789.05,
+        "difference": 17880.069999999992,
+        "growth": 0.14200790126327759
+      },
+      {
+        "channel": "金桥百货在线",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 86972.41,
+        "current": 103865.37999999999,
+        "difference": 16892.969999999987,
+        "growth": 0.1942336655957905
+      },
+      {
+        "channel": "金桥百货在线",
+        "metric": "HEADCOUNT",
+        "previous": 3.8,
+        "current": 4.12,
+        "difference": 0.3200000000000003,
+        "growth": 0.08421052631578956
+      },
+      {
+        "channel": "锦绣生活馆",
+        "metric": "GMV",
+        "previous": 1015101.6,
+        "current": 1434896.52,
+        "difference": 419794.92000000004,
+        "growth": 0.4135496584775357
+      },
+      {
+        "channel": "锦绣生活馆",
+        "metric": "REVENUE",
+        "previous": 144587.89,
+        "current": 198502.64,
+        "difference": 53914.75,
+        "growth": 0.3728856545316485
+      },
+      {
+        "channel": "锦绣生活馆",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 103526.31000000003,
+        "current": 145636.34000000003,
+        "difference": 42110.03,
+        "growth": 0.4067567944805527
+      },
+      {
+        "channel": "锦绣生活馆",
+        "metric": "HEADCOUNT",
+        "previous": 3.12,
+        "current": 3.6,
+        "difference": 0.48,
+        "growth": 0.15384615384615383
+      },
+      {
+        "channel": "鼎盛电子渠道",
+        "metric": "GMV",
+        "previous": 766050.5,
+        "current": 923536.41,
+        "difference": 157485.91000000003,
+        "growth": 0.2055816294095494
+      },
+      {
+        "channel": "鼎盛电子渠道",
+        "metric": "REVENUE",
+        "previous": 95540.93000000001,
+        "current": 124596.45,
+        "difference": 29055.51999999999,
+        "growth": 0.30411594276924026
+      },
+      {
+        "channel": "鼎盛电子渠道",
+        "metric": "ENTERPRISE_INCOME",
+        "previous": 67530.6,
+        "current": 87916.4,
+        "difference": 20385.79999999999,
+        "growth": 0.3018750018510125
+      },
+      {
+        "channel": "鼎盛电子渠道",
+        "metric": "HEADCOUNT",
+        "previous": 4.2,
+        "current": 4.36,
+        "difference": 0.16000000000000014,
+        "growth": 0.038095238095238126
+      }
+    ]
+  },
+  "anomalies": [
+    {
+      "channel": "乐购优品",
+      "metric": "GMV",
+      "previous": 680265.6,
+      "current": 817155.59,
+      "difference": 136889.99,
+      "growth": 0.2012302106706557
+    },
+    {
+      "channel": "乐购优品",
+      "metric": "REVENUE",
+      "previous": 85092.05,
+      "current": 105694.23,
+      "difference": 20602.179999999993,
+      "growth": 0.24211639042660263
+    },
+    {
+      "channel": "乐购优品",
+      "metric": "ORDER_COUNT",
+      "previous": 2037.0,
+      "current": 2568.0,
+      "difference": 531.0,
+      "growth": 0.2606774668630339
+    },
+    {
+      "channel": "凯瑞电商",
+      "metric": "REVENUE",
+      "previous": 70775.59,
+      "current": 85021.9,
+      "difference": 14246.309999999998,
+      "growth": 0.20128846682874701
+    },
+    {
+      "channel": "品胜严选",
+      "metric": "GMV",
+      "previous": 907002.88,
+      "current": 1088442.8699999999,
+      "difference": 181439.98999999987,
+      "growth": 0.20004345520931519
+    },
+    {
+      "channel": "品胜严选",
+      "metric": "ORDER_COUNT",
+      "previous": 2663.0,
+      "current": 3515.0,
+      "difference": 852.0,
+      "growth": 0.3199399173864063
+    },
+    {
+      "channel": "天际数码港",
+      "metric": "REVENUE",
+      "previous": 131384.56,
+      "current": 170994.26,
+      "difference": 39609.70000000001,
+      "growth": 0.30147910835184905
+    },
+    {
+      "channel": "天际数码港",
+      "metric": "ORDER_COUNT",
+      "previous": 3722.0,
+      "current": 4986.0,
+      "difference": 1264.0,
+      "growth": 0.3396023643202579
+    },
+    {
+      "channel": "惠通达渠道",
+      "metric": "REVENUE",
+      "previous": 64190.96,
+      "current": 79730.1,
+      "difference": 15539.140000000007,
+      "growth": 0.24207676594959798
+    },
+    {
+      "channel": "惠通达渠道",
+      "metric": "ORDER_COUNT",
+      "previous": 1510.0,
+      "current": 1927.0,
+      "difference": 417.0,
+      "growth": 0.276158940397351
+    },
+    {
+      "channel": "芯联科技店",
+      "metric": "ORDER_COUNT",
+      "previous": 4606.0,
+      "current": 6083.0,
+      "difference": 1477.0,
+      "growth": 0.32066869300911854
+    },
+    {
+      "channel": "锦绣生活馆",
+      "metric": "ORDER_COUNT",
+      "previous": 4495.0,
+      "current": 6086.0,
+      "difference": 1591.0,
+      "growth": 0.35394883203559513
+    },
+    {
+      "channel": "万家好物联盟",
+      "metric": "GMV",
+      "previous": 1332494.88,
+      "current": 1634261.11,
+      "difference": 301766.2300000002,
+      "growth": 0.2264670840611412
+    },
+    {
+      "channel": "乐购优品",
+      "metric": "ENTERPRISE_INCOME",
+      "previous": 38075.98,
+      "current": 49254.04,
+      "difference": 11178.059999999998,
+      "growth": 0.29357248322958457
+    },
+    {
+      "channel": "云端优品专营",
+      "metric": "GMV",
+      "previous": 550054.08,
+      "current": 678042.59,
+      "difference": 127988.51000000001,
+      "growth": 0.23268350268395432
+    },
+    {
+      "channel": "品胜严选",
+      "metric": "GMV",
+      "previous": 597853.96,
+      "current": 718551.76,
+      "difference": 120697.80000000005,
+      "growth": 0.2018850891277864
+    },
+    {
+      "channel": "品胜严选",
+      "metric": "REVENUE",
+      "previous": 81256.03,
+      "current": 98816.37,
+      "difference": 17560.339999999997,
+      "growth": 0.2161112227609446
+    },
+    {
+      "channel": "天际数码港",
+      "metric": "REVENUE",
+      "previous": 104024.1,
+      "current": 138232.7,
+      "difference": 34208.600000000006,
+      "growth": 0.3288526408784119
+    },
+    {
+      "channel": "天际数码港",
+      "metric": "ENTERPRISE_INCOME",
+      "previous": 73273.08,
+      "current": 103743.88000000002,
+      "difference": 30470.800000000017,
+      "growth": 0.4158525886996973
+    },
+    {
+      "channel": "尚品优选",
+      "metric": "HEADCOUNT",
+      "previous": 4.44,
+      "current": 2.8,
+      "difference": -1.6400000000000006,
+      "growth": -0.3693693693693695
+    },
+    {
+      "channel": "惠通达渠道",
+      "metric": "GMV",
+      "previous": 346068.6,
+      "current": 426284.81,
+      "difference": 80216.21000000002,
+      "growth": 0.23179280061814342
+    },
+    {
+      "channel": "惠通达渠道",
+      "metric": "REVENUE",
+      "previous": 45436.4,
+      "current": 56505.82,
+      "difference": 11069.419999999998,
+      "growth": 0.24362449489836338
+    },
+    {
+      "channel": "惠通达渠道",
+      "metric": "ENTERPRISE_INCOME",
+      "previous": 33236.2,
+      "current": 41119.880000000005,
+      "difference": 7883.680000000008,
+      "growth": 0.2372016054783642
+    },
+    {
+      "channel": "环球数码城",
+      "metric": "REVENUE",
+      "previous": 77040.0,
+      "current": 94600.54,
+      "difference": 17560.539999999994,
+      "growth": 0.22794055036344749
+    },
+    {
+      "channel": "环球数码城",
+      "metric": "ENTERPRISE_INCOME",
+      "previous": 53045.78,
+      "current": 67505.32999999999,
+      "difference": 14459.549999999988,
+      "growth": 0.2725862453148957
+    },
+    {
+      "channel": "盛世优选",
+      "metric": "GMV",
+      "previous": 538090.4,
+      "current": 694972.09,
+      "difference": 156881.68999999994,
+      "growth": 0.2915526647567025
+    },
+    {
+      "channel": "盛世优选",
+      "metric": "REVENUE",
+      "previous": 68218.24,
+      "current": 91307.58,
+      "difference": 23089.339999999997,
+      "growth": 0.3384628509911718
+    },
+    {
+      "channel": "盛世优选",
+      "metric": "ENTERPRISE_INCOME",
+      "previous": 44844.51,
+      "current": 64924.44000000001,
+      "difference": 20079.930000000008,
+      "growth": 0.44776785385769646
+    },
+    {
+      "channel": "芯联科技店",
+      "metric": "GMV",
+      "previous": 1187975.04,
+      "current": 1430719.4,
+      "difference": 242744.35999999987,
+      "growth": 0.20433456245006618
+    },
+    {
+      "channel": "芯联科技店",
+      "metric": "HEADCOUNT",
+      "previous": 4.16,
+      "current": 3.28,
+      "difference": -0.8800000000000003,
+      "growth": -0.21153846153846162
+    },
+    {
+      "channel": "蓝海科技直营",
+      "metric": "GMV",
+      "previous": 437601.15,
+      "current": 543675.32,
+      "difference": 106074.16999999993,
+      "growth": 0.24239920301854764
+    },
+    {
+      "channel": "蓝海科技直营",
+      "metric": "REVENUE",
+      "previous": 56872.45,
+      "current": 74624.45,
+      "difference": 17752.0,
+      "growth": 0.3121370716401351
+    },
+    {
+      "channel": "蓝海科技直营",
+      "metric": "ENTERPRISE_INCOME",
+      "previous": 42197.57,
+      "current": 52912.6,
+      "difference": 10715.029999999999,
+      "growth": 0.2539252852711661
+    },
+    {
+      "channel": "锦绣生活馆",
+      "metric": "GMV",
+      "previous": 1015101.6,
+      "current": 1434896.52,
+      "difference": 419794.92000000004,
+      "growth": 0.4135496584775357
+    },
+    {
+      "channel": "锦绣生活馆",
+      "metric": "REVENUE",
+      "previous": 144587.89,
+      "current": 198502.64,
+      "difference": 53914.75,
+      "growth": 0.3728856545316485
+    },
+    {
+      "channel": "锦绣生活馆",
+      "metric": "ENTERPRISE_INCOME",
+      "previous": 103526.31000000003,
+      "current": 145636.34000000003,
+      "difference": 42110.03,
+      "growth": 0.4067567944805527
+    },
+    {
+      "channel": "鼎盛电子渠道",
+      "metric": "GMV",
+      "previous": 766050.5,
+      "current": 923536.41,
+      "difference": 157485.91000000003,
+      "growth": 0.2055816294095494
+    },
+    {
+      "channel": "鼎盛电子渠道",
+      "metric": "REVENUE",
+      "previous": 95540.93000000001,
+      "current": 124596.45,
+      "difference": 29055.51999999999,
+      "growth": 0.30411594276924026
+    },
+    {
+      "channel": "鼎盛电子渠道",
+      "metric": "ENTERPRISE_INCOME",
+      "previous": 67530.6,
+      "current": 87916.4,
+      "difference": 20385.79999999999,
+      "growth": 0.3018750018510125
+    }
+  ]
+}

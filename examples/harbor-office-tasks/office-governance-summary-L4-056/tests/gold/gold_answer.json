@@ -1,0 +1,147 @@
+{
+  "case_id": "office-governance-summary-L4-056",
+  "case_type": "governance_docx",
+  "output_contract": {
+    "path": "/workspace/output/result.docx",
+    "type": "docx"
+  },
+  "required_sections": [
+    "管理摘要",
+    "里程碑",
+    "风险与阻塞",
+    "决策清单",
+    "数据冲突",
+    "来源说明"
+  ],
+  "current_items": [
+    {
+      "id": "M-101",
+      "tokens": [
+        "已完成",
+        "2026-06-30",
+        "v1.8"
+      ]
+    },
+    {
+      "id": "M-205",
+      "tokens": [
+        "已完成初筛",
+        "抽样复核",
+        "2026-07-03"
+      ]
+    },
+    {
+      "id": "M-310",
+      "tokens": [
+        "启动日已锁定",
+        "2026-07-15"
+      ]
+    },
+    {
+      "id": "M-206",
+      "tokens": [
+        "黄色关注",
+        "8月第一周"
+      ]
+    },
+    {
+      "id": "DEC-044",
+      "tokens": [
+        "待治理会确认",
+        "2026-07-05"
+      ]
+    },
+    {
+      "id": "M-407",
+      "tokens": [
+        "冻结",
+        "2026-07-04"
+      ]
+    },
+    {
+      "id": "RISK-118",
+      "tokens": [
+        "2026-07-12",
+        "8月第一周"
+      ]
+    }
+  ],
+  "source_markers": [
+    "登记簿",
+    "里程碑更新",
+    ".xlsx"
+  ],
+  "conflicts": [
+    {
+      "id": "M-101",
+      "required_groups": [
+        [
+          "待签署",
+          "旧稿"
+        ],
+        [
+          "已完成"
+        ],
+        [
+          "采用",
+          "口径"
+        ]
+      ]
+    },
+    {
+      "id": "M-205",
+      "required_groups": [
+        [
+          "草案待抽样",
+          "旧稿"
+        ],
+        [
+          "已完成初筛"
+        ],
+        [
+          "采用",
+          "口径"
+        ]
+      ]
+    },
+    {
+      "id": "M-206",
+      "required_groups": [
+        [
+          "橙色",
+          "旧稿"
+        ],
+        [
+          "黄色关注"
+        ],
+        [
+          "采用",
+          "口径"
+        ]
+      ]
+    }
+  ],
+  "unsupported_owner_items": [
+    "M-206",
+    "RISK-118"
+  ],
+  "false_claims": [
+    {
+      "id": "M-101",
+      "claim": "待签署"
+    },
+    {
+      "id": "DEC-044",
+      "claim": "已完成"
+    },
+    {
+      "id": "M-206",
+      "claim": "橙色"
+    },
+    {
+      "id": "RISK-118",
+      "claim": "已解除"
+    }
+  ],
+  "minimum_characters": 1200
+}

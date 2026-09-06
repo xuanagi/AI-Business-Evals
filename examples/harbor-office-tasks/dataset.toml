@@ -1,0 +1,32 @@
+[dataset]
+name = "agentic-office-evals/harbor-office-task-examples"
+version = "1.1.1"
+description = "面向本地 Office 文件处理的六个 Harbor 教学任务。"
+keywords = [ "office", "local-files", "xlsx", "docx", "harbor",]
+[[dataset.authors]]
+name = "AI Business Evals contributors"
+
+
+[[tasks]]
+name = "agentic-office-evals/office-channel-anomaly-analysis-l4-054"
+digest = "sha256:3772e6799b2a89c4faac568dadc34c881fae8fa27dfc6d832d10103e0c26b400"
+
+[[tasks]]
+name = "agentic-office-evals/office-demand-forecast-l4-055"
+digest = "sha256:ea6ad6831ccd858f4636c30667507233d24913c0b71f474e4ca1a9307afd05d1"
+
+[[tasks]]
+name = "agentic-office-evals/office-fee-data-cleaning-l3-051"
+digest = "sha256:8a0885cc5c22a44fe42df50f6f3b1fe2f09d51e42189a5eb807164d5397a3ae8"
+
+[[tasks]]
+name = "agentic-office-evals/office-governance-summary-l4-056"
+digest = "sha256:4eef1efee4efa07453c696efe2c75f0981e335515a352ef5a7ca7df2b6161503"
+
+[[tasks]]
+name = "agentic-office-evals/office-procurement-reconcile-l3-052"
+digest = "sha256:54616c388e74c400284f8ce1221d903a8e8947f7016674acea32eb7eda5258eb"
+
+[[tasks]]
+name = "agentic-office-evals/office-ticket-weekly-dashboard-l3-053"
+digest = "sha256:a420c358d72d8a4a393fad2b52d2b4e2664ddbf93d8e78bbb0689303657ac3ad"

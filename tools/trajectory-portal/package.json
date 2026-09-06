@@ -1,0 +1,28 @@
+{
+  "name": "agentic-office-trajectory-portal",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json && vite build",
+    "test": "node test-utils.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "6.3.4",
+    "antd": "6.6.2",
+    "dayjs": "1.11.23",
+    "echarts": "6.1.0",
+    "echarts-for-react": "3.0.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "@vitejs/plugin-react": "6.1.1",
+    "typescript": "5.9.3",
+    "vite": "8.2.2"
+  }
+}

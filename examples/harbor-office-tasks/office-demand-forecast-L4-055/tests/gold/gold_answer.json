@@ -1,0 +1,217 @@
+{
+  "case_id": "office-demand-forecast-L4-055",
+  "case_type": "forecast",
+  "output_contract": {
+    "path": "/workspace/output/result.xlsx",
+    "type": "xlsx"
+  },
+  "required_sheets": [
+    "历史数据",
+    "历史验证",
+    "预测结果",
+    "预测说明"
+  ],
+  "history": {
+    "2023-01": {
+      "demand": 820,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2023-02": {
+      "demand": 760,
+      "promotion": false,
+      "stockout_days": 1
+    },
+    "2023-03": {
+      "demand": 890,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2023-04": {
+      "demand": 910,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2023-05": {
+      "demand": 940,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2023-06": {
+      "demand": 980,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2023-07": {
+      "demand": 935,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2023-08": {
+      "demand": 950,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2023-09": {
+      "demand": 1030,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2023-10": {
+      "demand": 1005,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2023-11": {
+      "demand": 1100,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2023-12": {
+      "demand": 1210,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2024-01": {
+      "demand": 875,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2024-02": {
+      "demand": 810,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2024-03": {
+      "demand": 945,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2024-04": {
+      "demand": 970,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2024-05": {
+      "demand": 1000,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2024-06": {
+      "demand": null,
+      "promotion": true,
+      "stockout_days": 4
+    },
+    "2024-07": {
+      "demand": 995,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2024-08": {
+      "demand": 1015,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2024-09": {
+      "demand": 1105,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2024-10": {
+      "demand": 1070,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2024-11": {
+      "demand": 1185,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2024-12": {
+      "demand": 1295,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2025-01": {
+      "demand": 930,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2025-02": {
+      "demand": 855,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2025-03": {
+      "demand": 1005,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2025-04": {
+      "demand": 1035,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2025-05": {
+      "demand": 1075,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2025-06": {
+      "demand": 1160,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2025-07": {
+      "demand": 1060,
+      "promotion": false,
+      "stockout_days": 2
+    },
+    "2025-08": {
+      "demand": 1090,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2025-09": {
+      "demand": 1180,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2025-10": {
+      "demand": 1150,
+      "promotion": false,
+      "stockout_days": 0
+    },
+    "2025-11": {
+      "demand": 1510,
+      "promotion": true,
+      "stockout_days": 0
+    },
+    "2025-12": {
+      "demand": 1390,
+      "promotion": true,
+      "stockout_days": 0
+    }
+  },
+  "missing_month": "2024-06",
+  "validation_actuals": {
+    "2025-10": 1150,
+    "2025-11": 1510,
+    "2025-12": 1390
+  },
+  "maximum_validation_mape": 0.25,
+  "forecast_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03"
+  ],
+  "forecast_bounds": [
+    641.25,
+    1887.5
+  ],
+  "interval_width_ratio": [
+    0.05,
+    0.6
+  ],
+  "algorithm_is_prescribed": false
+}

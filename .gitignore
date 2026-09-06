@@ -1,0 +1,7 @@
+harbor-jobs/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+node_modules/
+*.tsbuildinfo
+.env

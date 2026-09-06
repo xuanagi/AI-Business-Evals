@@ -1,0 +1,39 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  harbor-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: tools/trajectory-portal/package-lock.json
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python scripts/validate_harbor.py
+      - run: python -m pytest -q
+      - run: python -m pip install harbor==0.22.0
+      - run: python -m pytest tests/test_http_evaluation.py -q
+      - name: HTTP and oracle Harbor smoke tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: |
+          python examples/http-reconciliation-service.py &
+          service_pid=$!
+          trap 'kill "$service_pid"' EXIT
+          harbor run --path examples/harbor-http-tasks/http-reconciliation --agent harbor_agents.http_json:HttpJsonAgent --agent-kwarg endpoint=http://127.0.0.1:8766/reconcile --agent-kwarg target_version=demo-v1 --jobs-dir harbor-jobs --job-name http-ci --artifact /workspace/output --max-retries 0
+          harbor run --path examples/harbor-http-tasks/http-reconciliation --agent oracle --jobs-dir harbor-jobs --job-name http-oracle-ci --artifact /workspace/output --max-retries 0
+          python scripts/check_http_smoke.py harbor-jobs/http-ci harbor-jobs/http-oracle-ci
+      - run: npm ci && npm test && npm run build
+        working-directory: tools/trajectory-portal
+      - run: docker build --tag agentic-office-evals-validation:ci examples/harbor-office-tasks/office-ticket-weekly-dashboard-L3-053/environment
+      - run: docker run --rm -v "$PWD:/repo" -w /repo agentic-office-evals-validation:ci python -m pytest -q
