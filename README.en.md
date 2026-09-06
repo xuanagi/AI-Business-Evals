@@ -48,7 +48,7 @@ HTTP is an integration mechanism, not a scoring standard. The adapter calls the 
 
 ## Quick start
 
-Choose one reference path; both reuse Harbor and do not require a second Runner. HTTP integration has been verified with Harbor 0.22.0 / Python 3.12. See the linked run guides for complete commands.
+HTTP integration has been verified with Harbor 0.22.0 / Python 3.12. See the linked run guides for complete commands.
 
 | Path | Prerequisites | Entry point and expected result |
 | --- | --- | --- |
