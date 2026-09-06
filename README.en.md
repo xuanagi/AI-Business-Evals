@@ -22,7 +22,7 @@ Runnable does not mean business-compliant, and one successful run does not prove
 
 1. **Verify that a business solution is actually usable**
 
-   Turn reconciliation, data cleaning, weekly reporting, and similar work into inputs, deliverable requirements, and executable acceptance rules. Do not stop at a plausible answer, a generated file, or a successful HTTP response: check completeness, calculations, and exception handling so release decisions have evidence.
+   Do not stop at a plausible answer, a generated file, or a successful HTTP response: check completeness, calculations, and exception handling so release decisions have evidence.
 
 2. **Compare implementations and versions**
 
