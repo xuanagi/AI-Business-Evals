@@ -4,7 +4,7 @@
 
 [中文](README.md) | English
 
-This repository is a **business-outcome evaluation method and starter kit for AI systems**. It helps teams turn real work into repeatable evaluation tasks with verifiable results and evidence that explains failures.
+This repository is an **AI-era business-outcome evaluation method and starter kit**. It helps teams turn real work into repeatable evaluation tasks with verifiable results and evidence that explains failures.
 
 The subject under evaluation may be an AI Agent that completes work directly, or an application, algorithm, or workflow exposed over HTTP.
 
