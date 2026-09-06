@@ -44,8 +44,6 @@ Define business inputs and acceptance rules → Execute with Harbor → Verify b
 - **This project** provides adaptable scenario examples, an HTTP execution adapter, scoring examples, and result-analysis tools.
 - **The business owner** defines inputs and acceptance rules and adapts environments, field mappings, and checks as needed.
 
-HTTP is an integration mechanism, not a scoring standard. The adapter calls the subject and saves its output; the Task verifier independently decides whether the business result is correct. The remote implementation does not need to resemble the evaluation-side implementation.
-
 ## Quick start
 
 HTTP integration has been verified with Harbor 0.22.0 / Python 3.12. See the linked run guides for complete commands.
