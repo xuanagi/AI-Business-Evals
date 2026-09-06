@@ -51,7 +51,7 @@ Define business inputs and acceptance rules → Execute with Harbor → Verify b
 | HTTP application / algorithm | Python, uv, a running Docker daemon; the local teaching service needs no model account | Follow [HTTP quick start](docs/harbor/http-evaluation.en.md) to run HTTP and oracle implementations. Both should pass the same verifier and produce response JSON, call logs, and component scores. |
 | Office Agent | Harbor, a running Docker daemon, and credentials for the selected Agent | Follow the [Office workflow](docs/harbor/workflow.en.md#4-run-one-or-more-models) for the six examples. You will get Office deliverables, component scores, and (where supported) trajectories; scores depend on the Agent. |
 
-The Tasks live under the [HTTP examples](examples/harbor-http-tasks/README.en.md) and [Office examples](examples/harbor-office-tasks/README.en.md). When connecting your own HTTP service, authentication and dependencies are service-specific; “no model account” applies only to the local teaching service.
+The Tasks live under the [HTTP examples](examples/harbor-http-tasks/README.en.md) and [Office examples](examples/harbor-office-tasks/README.en.md). When connecting your own HTTP service, authentication and dependencies are service-specific.
 
 ### Review results
 

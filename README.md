@@ -49,7 +49,7 @@
 | HTTP 应用 / 算法 | Python、uv、已启动的 Docker；本地教学服务无需模型账号 | 按 [HTTP 快速开始](docs/harbor/http-evaluation.md) 启动服务并运行 HTTP / oracle 两种实现；预期都通过同一个 verifier，得到响应 JSON、调用记录和分项评分 |
 | Office Agent | 已安装 Harbor、已启动的 Docker、所选 Agent 的认证信息 | 按 [Office 运行流程](docs/harbor/workflow.md#4-运行一个或多个模型) 执行六个示例；得到 Office 交付物、分项评分和可用的运行轨迹，具体成绩取决于被测 Agent |
 
-对应任务分别位于 [HTTP 示例](examples/harbor-http-tasks) 和 [Office 示例](examples/harbor-office-tasks)。接入自己的 HTTP 服务时，认证和依赖由该服务决定；“无需模型账号”仅指本地教学示例。
+对应任务分别位于 [HTTP 示例](examples/harbor-http-tasks) 和 [Office 示例](examples/harbor-office-tasks)。接入自己的 HTTP 服务时，认证和依赖由该服务决定。
 
 ### 查看结果
 
