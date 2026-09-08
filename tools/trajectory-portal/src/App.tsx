@@ -1420,6 +1420,7 @@ function ProcessComparison({ left, right }: { left?: TrialDetail; right?: TrialD
         rowKey="key"
         size="small"
         dataSource={visibleRows}
+        showSerial={false}
         locale={{ emptyText: tr(filter === "differences" && rows.length ? "两侧结构化执行过程一致；切换到“显示全部”可查看完整步骤" : "没有可显示的执行步骤") }}
         pagination={{ pageSize: DEFAULT_TABLE_PAGE_SIZE, showSizeChanger: false, hideOnSinglePage: true }}
         rowClassName={(row) => [row.difference === "same" ? "" : "divergence-row", row.key === selectedRowKey ? "selected-comparison-row" : ""].filter(Boolean).join(" ")}

@@ -2,7 +2,7 @@
 
 中文 | [English](README.en.md)
 
-这是一个只在本机运行的 Harbor 结果与过程分析工具。它读取 `harbor-jobs`，通过三个职责独立的页面展示 Job 总览、单个 Trial 和双 Trial 差异，并提供 Harbor Viewer、RLViz、AgentViz 的受控启动入口。
+这是一个只在本机运行的 Harbor 结果与过程分析工具。它读取 `harbor-jobs`，通过三个职责独立的页面展示 Job 总览、单个 Trial 和 Trial 对比；对比页支持横向查看 2–4 个 Trial，并选择其中两个做深度对比。它还提供 Harbor Viewer、RLViz、AgentViz 的受控启动入口。
 
 ## 启动
 

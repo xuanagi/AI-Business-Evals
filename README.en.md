@@ -1,7 +1,5 @@
 # AI Business Evals
 
-> A framework for evaluating business outcomes across AI systems.
-
 [中文](README.md) | English
 
 This repository is an **AI-era business-outcome evaluation method and starter kit**. It helps teams turn real work into repeatable evaluation tasks with verifiable results and evidence that explains failures.
@@ -32,7 +30,26 @@ Runnable does not mean business-compliant, and one successful run does not prove
 
    The repository provides Task structure, execution adapters, input packaging, reference facts, positive/negative scoring fixtures, and result-analysis tools. Teams mainly customize business inputs, invocation, and acceptance rules; unusual requirements can stay local to the relevant Task and adapter.
 
-For Agent evaluations, component scores, deliverables, and execution trajectories also support model selection and process diagnosis. Once a workflow is mature, authorized successful trajectories, corrected failures, and preference pairs can feed distillation or post-training, consolidating suitable capabilities into specialized small models. Keep an independent evaluation set close to the target business distribution to validate capabilities, regressions, and boundaries, and to inform the division of work between frontier models and specialized models.
+For Agent evaluations, component scores, deliverables, and execution trajectories also support model selection and process diagnosis. Reusable experience from an evaluation is more than the trajectory: it is the complete run evidence, including Task and input versions, runtime conditions, deliverables, component outcomes, process traces, cost, and latency.
+
+As a business process matures, authorized and curated run evidence can support downstream optimization. Successful trajectories, corrected failures, and preference pairs can feed distillation or post-training; sufficiently large and consistently labeled datasets can train task-routing or failure-prediction models; and stable success patterns with clear boundaries can be consolidated into rules, workflows, or conventional programs, leaving open-ended and long-tail work to Agents. These are downstream uses of evaluation data, not built-in training or workflow-generation features of this repository. Whether the final implementation is an Agent, model, workflow, or conventional program, continue to validate it with the same business acceptance contract and an independent evaluation set close to the target distribution.
+
+```mermaid
+flowchart TD
+    A["Business problem and acceptance criteria"] --> B["Agent exploration or candidate execution"]
+    B --> C["Complete evaluation-run evidence<br/>inputs, environment, outcomes, artifacts, trajectory, cost"]
+    C --> D["Understand task structure, exceptions, and boundaries"]
+    D --> E["Stable with explicit rules"]
+    D --> F["Predictable decisions"]
+    D --> G["Open-ended, complex, or long-tail"]
+    E --> H["Rules / Workflow / Program"]
+    F --> I["Traditional ML / small model"]
+    G --> J["Agent"]
+    H --> K["Continue validating with the same business Eval"]
+    I --> K
+    J --> K
+    K -- "produce new run evidence" --> C
+```
 
 ## Workflow and responsibilities
 
@@ -67,7 +84,7 @@ Linux / macOS:
 ./scripts/start-trajectory-portal.sh
 ```
 
-[The Portal](tools/trajectory-portal/README.en.md) (this project’s run-results analysis and inspection interface) provides run overview, single-Trial review, multi-Trial comparison, and deep two-Trial comparison. It can open Harbor Viewer, RLViz, and AgentViz. HTTP examples show the response and call log; they do not produce model conversation trajectories.
+[The Portal](tools/trajectory-portal/README.en.md) (this project’s run-results analysis and inspection interface) provides run overview, single-Trial review, comparison of 2–4 Trials, and deep comparison of two selected Trials. It can open Harbor Viewer, RLViz, and AgentViz. HTTP examples show the response and call log; they do not produce model conversation trajectories.
 
 ### Portal at a glance
 

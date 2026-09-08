@@ -28,7 +28,7 @@ Windows 用户可直接双击仓库根目录的 `start-trajectory-portal.bat`。
 
 Portal 默认读取 `harbor-jobs`，只监听本机地址。页面能够标记第一个工具名称或参数不同的原始分叉；正式判断 first meaningful divergence 时，仍应使用 RLViz 或结合业务阶段人工检查。
 
-在 Trial 对比页中应先选择 Task，再选择两个包含该 Task 的 Job。Task 名称相同后，页面还会检查 Harbor 保存的 `task_checksum`；只有名称和 checksum 均一致，分数、成品和 trajectory 才适合直接横向比较。需要先理解某一次运行时，应从运行概览进入 Trial 详情页，再使用“与另一个 Trial 对比”进入对比页。
+在 Trial 对比页中应先选择 Task，再从运行过该 Task 的 Job 中选择 2–4 个 Trial；深度查看过程或日志时，从已选 Trial 中指定两个。Task 名称相同后，页面还会检查 Harbor 保存的 `task_checksum`；名称和 checksum 一致是直接比较的前提，资源、模型配置等运行条件也应按比较目的控制。需要先理解某一次运行时，应从运行概览进入 Trial 详情页，再使用“与另一个 Trial 对比”进入对比页。完整页面能力与外部工具安装说明见 [Portal 使用说明](../../tools/trajectory-portal/README.md)。
 
 ## 先找到 trajectory
 

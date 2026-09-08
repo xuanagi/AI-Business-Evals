@@ -28,7 +28,7 @@ Linux / macOS:
 
 The Portal has separate overview, Trial, and comparison pages. It can mark the first raw divergence in tool name, arguments, or results, but “first meaningful divergence” remains a business judgment that should use scores, deliverables, RLViz, or manual stage review.
 
-In Trial comparison, choose a Task first and then choose Trials that ran it. Matching Task names are not sufficient: the Portal also checks Harbor's `task_checksum`. Scores, artifacts, and trajectories are directly comparable only when both the name and checksum match. To understand one run before comparing it, open Trial details from the overview and then use “Compare with another Trial”.
+In Trial comparison, choose a Task first, then select 2–4 Trials from Jobs that ran it. Select two of those Trials for deep process or log comparison. The Portal also checks Harbor's `task_checksum`: matching names and checksums are a prerequisite for direct comparison, and runtime conditions such as resources and model configuration must be controlled for the comparison's purpose. To understand one run first, open Trial details from the overview and use “Compare with another Trial”. See the [Portal guide](../../tools/trajectory-portal/README.en.md) for page capabilities and external tool installation.
 
 ## Find trajectories
 

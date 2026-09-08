@@ -2,7 +2,7 @@
 
 [中文](README.md) | English
 
-This is a local-only Harbor result and process analysis tool. It reads `harbor-jobs`, presents Job overview, single-Trial review, and two-Trial differences on separate pages, and provides controlled launchers for Harbor Viewer, RLViz, and AgentViz.
+This is a local-only Harbor result and process analysis tool. It reads `harbor-jobs` and presents Job overview, single-Trial review, and Trial comparison on separate pages. The comparison page shows 2–4 Trials side by side and lets you select two for deep comparison. It also provides controlled launchers for Harbor Viewer, RLViz, and AgentViz.
 
 ## Start
 

@@ -24,7 +24,8 @@
 
 ```powershell
 $source = '.\examples\harbor-office-tasks\office-ticket-weekly-dashboard-L3-053'
-$target = '.\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057'
+New-Item -ItemType Directory -Path '.\business-tasks' -Force
+$target = '.\business-tasks\office-sales-monthly-summary-l3-057'
 Copy-Item -LiteralPath $source -Destination $target -Recurse
 ```
 
@@ -38,7 +39,7 @@ $env:PYTHONIOENCODING = 'utf-8'
 
 harbor init agentic-office-evals/office-sales-monthly-summary-l3-057 `
   --task `
-  --output-dir .\examples\harbor-office-tasks `
+  --output-dir .\business-tasks `
   --no-pytest `
   --no-solution `
   --include-standard-metadata `
@@ -74,14 +75,14 @@ New-Item -ItemType Directory -Path "$staging\output" -Force
 Copy-Item -LiteralPath 'D:\待评测资料\销售明细.xlsx' -Destination "$staging\input\销售明细.xlsx"
 
 tar -czf `
-  '.\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057\environment\workspace.tar.gz' `
+  '.\business-tasks\office-sales-monthly-summary-l3-057\environment\workspace.tar.gz' `
   -C $staging .
 ```
 
 检查压缩包：
 
 ```powershell
-tar -tf '.\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057\environment\workspace.tar.gz'
+tar -tf '.\business-tasks\office-sales-monthly-summary-l3-057\environment\workspace.tar.gz'
 ```
 
 不要放入参考成品、模型生成结果、密钥、客户真实敏感信息或用于解题的脚本。测试用业务数据应优先使用脱敏或合成数据。
@@ -125,7 +126,7 @@ Agent 并不会凭空知道可用包。它可以在容器内执行 `python -m pi
 
 评分器应同时验证正向要求和高风险负向错误。布局可以灵活，但金额、汇总、业务主键、字段关系、图表引用和可编辑性等事实应确定。文件不存在、打不开或缺少必要工作表应作为硬门槛；其余检查使用固定权重，不能因为提前返回而改变分母。不要只在整份文件中搜索几个“魔法数字”或关键词。
 
-在根目录的 `tests/` 中为新任务增加一份合格 oracle 夹具和至少一份对抗性负向夹具。若沿用公共评分器，先修改 `grading/`，再运行 `python scripts/sync_grading.py`；不要分别手改六份副本。
+在根目录 `tests/test_monthly_summary.py` 中为新任务添加合格 oracle 夹具和典型错误夹具，验证独立 Task 的 verifier。若修改的是内置 Office 公共评分器，先修改 `grading/`，再运行 `python scripts/sync_grading.py` 和 `python scripts/sync_grading.py --check`；不要分别手改六份副本。已复制到 `business-tasks/` 的评分代码由新业务独立维护。
 
 ## 7. 更新 `task.toml`
 
@@ -145,39 +146,45 @@ $env:PYTHONUTF8 = '1'
 $env:PYTHONIOENCODING = 'utf-8'
 
 harbor add `
-  .\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057 `
-  --to .\examples\harbor-office-tasks
+  .\business-tasks\office-sales-monthly-summary-l3-057 `
+  --to .\business-tasks
 ```
 
-以后修改这个 Task 的任何被 Harbor 打包的文件，都要运行 `harbor sync .\examples\harbor-office-tasks`。显示 `Updated` 表示摘要已刷新；没有改动时应显示 `Skipped`。
+以后修改这个 Task 的任何被 Harbor 打包的文件，都要运行 `harbor sync .\business-tasks`。显示 `Updated` 表示摘要已刷新；没有改动时应显示 `Skipped`。
+
+维护内置示例时，顺序为：修改维护源 → 必要时同步评分器 → `harbor sync .\examples\harbor-office-tasks` → 静态校验与回归测试。仓库文本使用 LF，BAT 使用 CRLF，由 `.gitattributes` 固定；摘要按文件字节计算，不要以平台换行转换后的内容反复刷新 manifest。新业务在独立仓库中维护时，也应保留相同的换行约定。
 
 ## 9. 校验和试跑
 
-先做静态校验：
+先用同一个 Python 环境安装仓库测试依赖并运行新业务的正反例测试，再解析 Task 配置：
 
 ```powershell
-.\scripts\validate-harbor.ps1
+python -m pip install -r requirements-dev.txt
+python -m pytest tests/test_monthly_summary.py -q
 
 harbor run --print-config `
-  -p .\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057 `
+  -p .\business-tasks\office-sales-monthly-summary-l3-057 `
   -a nop
 ```
 
-Linux / macOS 的静态校验入口为：
+Linux / macOS：
 
 ```bash
-./scripts/validate-harbor.sh
+python3 -m pip install -r requirements-dev.txt
+python3 -m pytest tests/test_monthly_summary.py -q
 
 harbor run --print-config \
-  -p ./examples/harbor-office-tasks/office-sales-monthly-summary-l3-057 \
+  -p ./business-tasks/office-sales-monthly-summary-l3-057 \
   -a nop
 ```
+
+新业务有额外依赖时，在同一环境安装。若本次还修改了内置示例，则另外运行 `python scripts/validate_harbor.py` 和 `python -m pytest -q`。静态校验不运行 Docker；`--docker` 只额外构建一个代表性镜像，不等于端到端试跑。
 
 再启动 Docker，用一个真实 Agent 做单题 smoke test：
 
 ```powershell
 harbor run `
-  -p .\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057 `
+  -p .\business-tasks\office-sales-monthly-summary-l3-057 `
   -a codex `
   -m gpt-5.6-luna `
   --ak reasoning_effort=medium `

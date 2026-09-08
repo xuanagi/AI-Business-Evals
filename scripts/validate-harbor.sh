@@ -13,7 +13,7 @@ Usage: ./scripts/validate-harbor.sh [options]
 
 Options:
   --dataset PATH  Harbor dataset directory
-  --docker        Also build and inspect every task image
+  --docker        Also require Docker and build one representative task image
   -h, --help      Show this help
 EOF
 }

@@ -22,7 +22,8 @@ If these answers are unclear, the Task will not be stable to score.
 
 ```powershell
 $source = '.\examples\harbor-office-tasks\office-ticket-weekly-dashboard-L3-053'
-$target = '.\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057'
+New-Item -ItemType Directory -Path '.\business-tasks' -Force
+$target = '.\business-tasks\office-sales-monthly-summary-l3-057'
 Copy-Item -LiteralPath $source -Destination $target -Recurse
 ```
 
@@ -35,7 +36,7 @@ $env:PYTHONUTF8 = '1'
 $env:PYTHONIOENCODING = 'utf-8'
 
 harbor init agentic-office-evals/office-sales-monthly-summary-l3-057 `
-  --task --output-dir .\examples\harbor-office-tasks `
+  --task --output-dir .\business-tasks `
   --no-pytest --no-solution --include-standard-metadata `
   --description 'Summarize monthly sales data and create a reviewable Excel report'
 ```
@@ -66,9 +67,9 @@ New-Item -ItemType Directory -Path "$staging\input" -Force
 New-Item -ItemType Directory -Path "$staging\output" -Force
 Copy-Item -LiteralPath 'D:\source-data\sales_detail.xlsx' -Destination "$staging\input\sales_detail.xlsx"
 
-tar -czf '.\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057\environment\workspace.tar.gz' `
+tar -czf '.\business-tasks\office-sales-monthly-summary-l3-057\environment\workspace.tar.gz' `
   -C $staging .
-tar -tf '.\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057\environment\workspace.tar.gz'
+tar -tf '.\business-tasks\office-sales-monthly-summary-l3-057\environment\workspace.tar.gz'
 ```
 
 Do not include reference deliverables, model outputs, keys, customer PII, or solving scripts. Prefer synthetic or de-identified data.
@@ -109,7 +110,7 @@ Implement:
 
 Check positive requirements and high-risk negative errors. Layout can be flexible, but amounts, aggregates, business keys, field relationships, chart references, and editability should be deterministic. A missing/unreadable file or required sheet is a hard gate; remaining checks use fixed weights and never shrink the denominator after an early return. Do not search the whole file for a few magic numbers.
 
-Add one compliant oracle fixture and at least one adversarial fixture under the root `tests/`. If reusing the shared scorer, edit `grading/` first and run `python scripts/sync_grading.py`; do not hand-edit six copies.
+Add compliant oracle and representative incorrect fixtures in root `tests/test_monthly_summary.py` to test the independent Task's verifier. When changing the bundled Office scorer, edit `grading/` first, then run `python scripts/sync_grading.py` and `python scripts/sync_grading.py --check`; do not hand-edit six copies. Scoring code copied into `business-tasks/` is maintained independently for the new business.
 
 ## 7. Update `task.toml`
 
@@ -130,38 +131,44 @@ The current Windows-compatible examples use `public` because their Docker provid
 $env:PYTHONUTF8 = '1'
 $env:PYTHONIOENCODING = 'utf-8'
 
-harbor add .\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057 `
-  --to .\examples\harbor-office-tasks
-harbor sync .\examples\harbor-office-tasks
+harbor add .\business-tasks\office-sales-monthly-summary-l3-057 `
+  --to .\business-tasks
+harbor sync .\business-tasks
 ```
 
 Run `harbor sync` after any packaged Task file changes. `Updated` means the manifest changed; an unchanged Task should be `Skipped`.
 
+For bundled examples, the order is: edit the source → sync scorer copies if needed → `harbor sync .\examples\harbor-office-tasks` → static validation and regression tests. `.gitattributes` fixes text files to LF and BAT files to CRLF. Digests use file bytes; do not repeatedly refresh the manifest for platform-specific line-ending conversions. Preserve the same line-ending policy when maintaining business Tasks in a separate repository.
+
 ## 9. Validate and smoke-test
 
-Start with static validation on Windows:
+Use the same Python environment to install repository test dependencies and run the new business tests, then parse the Task configuration on Windows:
 
 ```powershell
-.\scripts\validate-harbor.ps1
+python -m pip install -r requirements-dev.txt
+python -m pytest tests/test_monthly_summary.py -q
 harbor run --print-config `
-  -p .\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057 -a nop
+  -p .\business-tasks\office-sales-monthly-summary-l3-057 -a nop
 ```
 
-On Linux / macOS, use the equivalent cross-platform entry point:
+On Linux / macOS:
 
 ```bash
-./scripts/validate-harbor.sh
+python3 -m pip install -r requirements-dev.txt
+python3 -m pytest tests/test_monthly_summary.py -q
 
 harbor run --print-config \
-  -p ./examples/harbor-office-tasks/office-sales-monthly-summary-l3-057 \
+  -p ./business-tasks/office-sales-monthly-summary-l3-057 \
   -a nop
 ```
+
+Install any additional business dependencies in the same environment. If you also changed bundled examples, run `python scripts/validate_harbor.py` and `python -m pytest -q`. Static validation does not run Docker; `--docker` only adds a representative image build, not an end-to-end run.
 
 Then start Docker and run one real Agent:
 
 ```powershell
 harbor run `
-  -p .\examples\harbor-office-tasks\office-sales-monthly-summary-l3-057 `
+  -p .\business-tasks\office-sales-monthly-summary-l3-057 `
   -a codex -m gpt-5.6-luna --ak reasoning_effort=medium `
   --artifact /workspace/output --job-name office-sales-monthly-summary-smoke -o .\harbor-jobs
 ```

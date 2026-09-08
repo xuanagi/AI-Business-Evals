@@ -9,24 +9,24 @@ name = "AI Business Evals contributors"
 
 [[tasks]]
 name = "agentic-office-evals/office-channel-anomaly-analysis-l4-054"
-digest = "sha256:3772e6799b2a89c4faac568dadc34c881fae8fa27dfc6d832d10103e0c26b400"
+digest = "sha256:b69cf549d20df9785547ef9af7189a30617a2766dd5281d93035bdcbc6fcafdb"
 
 [[tasks]]
 name = "agentic-office-evals/office-demand-forecast-l4-055"
-digest = "sha256:ea6ad6831ccd858f4636c30667507233d24913c0b71f474e4ca1a9307afd05d1"
+digest = "sha256:8769c93bca98bae559ecf62303738689bbdbf150232582e10c028b88b8616b32"
 
 [[tasks]]
 name = "agentic-office-evals/office-fee-data-cleaning-l3-051"
-digest = "sha256:8a0885cc5c22a44fe42df50f6f3b1fe2f09d51e42189a5eb807164d5397a3ae8"
+digest = "sha256:9fe9a45883187ebd31cf16f699cb2f329c630aa6795bd2b91338f57dae8cc6de"
 
 [[tasks]]
 name = "agentic-office-evals/office-governance-summary-l4-056"
-digest = "sha256:4eef1efee4efa07453c696efe2c75f0981e335515a352ef5a7ca7df2b6161503"
+digest = "sha256:0a72ca62af62f9fc1d9d71e164fb4ddcae10a21f765e9aafb1b97208f6d60903"
 
 [[tasks]]
 name = "agentic-office-evals/office-procurement-reconcile-l3-052"
-digest = "sha256:54616c388e74c400284f8ce1221d903a8e8947f7016674acea32eb7eda5258eb"
+digest = "sha256:f01231cf6289823392b9b8fa24e5c52d8f4174f2cb4c282adbf8e05aebf95f7f"
 
 [[tasks]]
 name = "agentic-office-evals/office-ticket-weekly-dashboard-l3-053"
-digest = "sha256:a420c358d72d8a4a393fad2b52d2b4e2664ddbf93d8e78bbb0689303657ac3ad"
+digest = "sha256:8183ed6bcfed3c12d501c33f6bd7eea5846b1b9a49c68f1e5a290ec4bfb843c8"
